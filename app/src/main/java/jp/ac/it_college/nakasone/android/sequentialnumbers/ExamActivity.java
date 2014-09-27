@@ -41,6 +41,7 @@ public class ExamActivity extends Activity implements AdapterView.OnItemClickLis
 
     private void startExam() {
         findViewById(R.id.footer).setVisibility(View.GONE);
+
         setNumbers();
         final TextView elapsedTime = (TextView) findViewById(R.id.current_time);
         elapsedTime.setText("0.??");
@@ -80,6 +81,7 @@ public class ExamActivity extends Activity implements AdapterView.OnItemClickLis
     }
 
     private void setNumbers() {
+        nextNumber = 1;
         numberList = Arrays.asList(numbers);
         Random random = new Random();
         for (int i = 0; i < numberList.size(); i++) {
